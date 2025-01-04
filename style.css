@@ -1,0 +1,537 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #a8e6a3 0%, #e0f7fa 50%, #b2ff59 100%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: #ebebeb;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 30px;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  column-gap: 5rem;
+}
+
+.list a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.header-el {
+  display: flex;
+  align-items: center;
+}
+
+.header-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 30px;
+  margin-right: 0.3rem;
+}
+
+.header-arrow ion-icon {
+  color: #333;
+  font-size: 1.5rem;
+  background-color: rgb(151, 224, 151);
+  border-radius: 30px;
+  padding: 0.8rem;
+}
+
+.menu {
+  font-size: 3.2rem;
+  display: none;
+}
+
+.menu-items p {
+  display: none;
+}
+
+/* HERO SECTION */
+
+.hero {
+  height: 100vh;
+  text-align: center;
+  padding: 2.5rem 3rem;
+}
+
+.hero-heading {
+  font-size: 4.8rem;
+  line-height: 1.1;
+  font-weight: 600;
+  text-align: left;
+}
+
+.hero-heading span {
+  font-style: italic;
+}
+
+.hero .hero-el {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-el-btn {
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero-img {
+  width: 80rem;
+  max-height: 22rem;
+  border: 3px solid #333;
+  border-radius: 120px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  object-fit: cover;
+}
+
+/* JOURNEY SECTION */
+
+.journey {
+  background-image: linear-gradient(
+    to right bottom,
+    #443f3f,
+    #684e47,
+    #866147,
+    #9a7944,
+    #9f9743,
+    #929743,
+    #859745,
+    #779748,
+    #66783e,
+    #525a35,
+    #3d3f2d,
+    #262625
+  );
+  margin: 2rem 3rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.journey-text {
+  text-transform: uppercase;
+  color: #d6cfcf;
+  font-size: 0.8rem;
+}
+
+.joruney-heading {
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+  margin: 1rem 0;
+}
+
+.journey-card {
+  background-color: rgba(77, 63, 63, 0.801);
+  color: #fff;
+  height: 20rem;
+  padding: 2rem;
+  border-radius: 10px;
+  animation: fadeIn 2s ease-in;
+}
+
+.journey-card ion-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.journey-card .heading {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.journey-card .description {
+  font-size: 0.7rem;
+  color: #d6cfcf;
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+}
+
+.learn-more .learn-more-btn {
+  background-color: #fff;
+  color: #333;
+}
+
+/* FAQ SECTION */
+
+.faq {
+  background-color: #ebebeb;
+  padding: 2rem 3rem;
+}
+
+.faq .faq-text {
+  color: #333;
+}
+
+.faq-heading {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.question {
+  font-size: 1.3rem;
+  position: relative;
+  padding: 1rem 0;
+  border-bottom: 1px solid #333;
+}
+
+.question.active::after {
+  content: "-";
+}
+
+.question:hover {
+  cursor: pointer;
+}
+
+.question::before {
+  content: "-";
+  margin-right: 1rem;
+}
+
+.question::after {
+  content: "+";
+  font-size: 1rem;
+  color: #fff;
+  background-color: #333;
+  padding: 0.1rem 0.2rem;
+  border-radius: 6px;
+  position: absolute;
+  right: 1rem;
+}
+
+.answer {
+  font-size: 1.2rem;
+  height: 0;
+  visibility: hidden;
+}
+
+.faq-more {
+  color: #333;
+  font-size: 0.8rem;
+  margin: 0.6rem 0;
+}
+
+.faq-reach-us {
+  display: flex;
+  align-items: center;
+}
+
+/* FORMA SEKCIJA */
+.contact {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact form {
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: fadeIn 3s ease-in;
+}
+
+.contact ion-icon {
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.contact-heading {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.contact-text {
+  font-size: 0.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-text {
+  display: block;
+}
+
+.contact form {
+  width: 40rem;
+}
+
+.contact input {
+  display: block;
+  width: 37rem;
+  height: 3rem;
+  margin-bottom: 0.6rem;
+  border-radius: 5px;
+  margin-left: 1.5rem;
+  border: 1px dotted #333;
+}
+
+.contact textarea {
+  display: block;
+  width: 37rem;
+  border-radius: 5px;
+  margin-left: 1.5rem;
+  border: 1px dotted #333;
+}
+
+.form-btn {
+  display: block;
+  width: 37rem;
+  margin: 0.6rem 0;
+  height: 3rem;
+  text-transform: uppercase;
+  background-color: rgba(133, 255, 133, 0.658);
+  border: 1px dotted black;
+  margin-left: 1.5rem;
+  font-family: inherits;
+}
+
+.form-btn:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* RESPONZIVNOST */
+
+@media (min-width: 1920px) {
+  .faq {
+    padding-bottom: 5rem;
+  }
+  .hero-img {
+    width: 90rem;
+    min-height: 30rem;
+  }
+}
+
+@media (min-width: 1025px) and(max-width: 1200px) {
+  .hero .hero-img {
+    width: 60rem;
+    height: 30rem;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .hero .hero-img {
+    width: 45rem;
+    height: 20rem;
+  }
+
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+    row-gap: 1rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  header {
+    padding: 1rem 0.3rem;
+  }
+
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  header .list {
+    column-gap: 1.3rem;
+  }
+
+  header .list a {
+    font-size: 0.8rem;
+  }
+
+  header .header-btn {
+    font-size: 0.6rem;
+    padding: 0.6rem;
+  }
+
+  header .header-arrow ion-icon {
+    display: none;
+  }
+
+  header .menu {
+    display: inline-block;
+  }
+
+  .hero .hero-img {
+    width: 40rem;
+    height: 20rem;
+  }
+
+  .journey {
+    margin-top: 10rem;
+  }
+
+  .journey .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+    row-gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  header .list {
+    column-gap: 1.3rem;
+  }
+
+  header .list a {
+    font-size: 0.8rem;
+  }
+
+  header .header-btn {
+    font-size: 0.6rem;
+    padding: 0.6rem;
+  }
+
+  header .header-arrow ion-icon {
+    display: none;
+  }
+
+  header .menu {
+    display: inline-block;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  .menu-items ul {
+    height: 100svh;
+    background-color: #ebebeb;
+  }
+
+  .item {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 7rem;
+    animation: fadeIn 2s ease-in;
+  }
+
+  .item:last-child {
+    margin-bottom: 0rem;
+  }
+
+  /* HERO SECTION */
+  .hero .hero-heading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .hero .hero-text {
+    font-size: 0.7rem;
+  }
+
+  .hero .hero-btn {
+    font-size: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero .hero-el-btn ion-icon {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .hero .hero-img {
+    width: 20rem;
+    height: 15rem;
+  }
+
+  /* JOURNEY SECTION */
+
+  .journey .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 4;
+    row-gap: 1rem;
+  }
+
+  .journey .joruney-heading {
+    font-size: 1.8rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+  .question::after {
+    right: 1.5rem;
+  }
+  .answer {
+    font-size: 0.8rem;
+  }
+
+  /* CONTACT SECTION */
+  .contact form {
+    width: 20rem;
+  }
+
+  .contact input {
+    width: 16rem;
+  }
+
+  .contact textarea {
+    width: 16rem;
+  }
+
+  .contact .form-btn {
+    width: 16rem;
+  }
+}
